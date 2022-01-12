@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import re
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 def find_version():
