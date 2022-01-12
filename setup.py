@@ -33,6 +33,6 @@ setup(name='Janus',
       version=VERSION,
       url='https://github.com/usharerose/janus.git',
       install_requires=INSTALL_REQUIRES,
-      packages=['janus'],
-      package_data={'janus': ['build-tree-sitter/*.so']},
+      packages=find_packages(),
+      package_data={'': ['*.so']},
       entry_points={'console_scripts': ['janus=janus.cli:main']})
