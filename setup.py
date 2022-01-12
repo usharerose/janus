@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import re
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def find_version():
@@ -29,7 +29,14 @@ INSTALL_REQUIRES = []
 find_install_requires(INSTALL_REQUIRES)
 
 
+PACKAGES = find_packages()
+PACKAGE_DATA = {'build-tree-sitter': ['my-language.so']}
+
+
 setup(name='Janus',
       version=VERSION,
+      url='https://github.com/usharerose/janus.git',
       install_requires=INSTALL_REQUIRES,
+      packages=PACKAGES,
+      package_data=PACKAGE_DATA,
       entry_points={'console_scripts': ['janus=janus.cli:main']})
