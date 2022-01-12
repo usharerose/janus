@@ -1,5 +1,8 @@
 # Change Logs
 
+## 0.1.1 - 2022.01.12
+Skip the analysis on unsupported files instead of failure
+
 ## 0.1.0 - 2022.01.12
 Refactor the structure, and support multiple languages
 
