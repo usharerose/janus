@@ -6,14 +6,14 @@ from janus.app import Janus
 
 
 @click.command()
-@click.option('-f', '--file', required=True, help='source code file')
-def main(file):
+@click.argument('paths', nargs=-1, type=click.Path(exists=True))
+def main(paths):
     """
     Args:
-        file (str): the path of a file
+        paths (tuple): the paths of files or directories
     """
-    engine = Janus()
-    res = engine.process(file)
+    engine = Janus(paths)
+    res = engine.process()
     click.echo(json.dumps(res))
 
 
