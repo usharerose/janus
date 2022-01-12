@@ -33,6 +33,6 @@ setup(name='Janus',
       version=VERSION,
       url='https://github.com/usharerose/janus.git',
       install_requires=INSTALL_REQUIRES,
-      packages=find_packages(),
-      package_data={'': ['*.so']},
+      packages=['./janus'],
+      package_data={'./janus': ['my-language.so']},
       entry_points={'console_scripts': ['janus=janus.cli:main']})
