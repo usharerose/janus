@@ -12,8 +12,8 @@ def main(paths):
     Args:
         paths (tuple): the paths of files or directories
     """
-    engine = Janus(paths)
-    res = engine.process()
+    engine = Janus()
+    res = engine.process(paths)
     click.echo(json.dumps(res))
 
 
