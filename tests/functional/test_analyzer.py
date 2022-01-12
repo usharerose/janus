@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from unittest import TestCase
 
-from tree_sitter import Language, Parser
+from tree_sitter import Language
 
 from janus.analyzer import get_analyzer_by_extension, PythonAnalyzer
 

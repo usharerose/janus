@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import re
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools.command.install import install
+import subprocess
 
 
 def find_version():
@@ -29,6 +31,13 @@ INSTALL_REQUIRES = []
 find_install_requires(INSTALL_REQUIRES)
 
 
+class CustomInstall(install):
+
+    def run(self):
+        subprocess.run(['python', 'build_tree_sitter_lang_lib.py'])
+        super().run()
+
+
 PACKAGE_DATA = {'janus': ['build-tree-sitter/my-languages.so']}
 
 
@@ -38,4 +47,5 @@ setup(name='Janus',
       install_requires=INSTALL_REQUIRES,
       packages=['janus'],
       package_data=PACKAGE_DATA,
+      cmdclass={'install': CustomInstall},
       entry_points={'console_scripts': ['janus=janus.cli:main']})

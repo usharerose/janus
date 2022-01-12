@@ -1,5 +1,7 @@
 # Janus
 
+[![Build Status](https://github.com/usharerose/janus/actions/workflows/ci.yaml/badge.svg)](https://github.com/usharerose/janus/actions/workflows/ci.yaml)
+
 An analyzer of code cyclomatic complexity, which only works with Python 3.
 
 A list of supported languages:
@@ -9,16 +11,8 @@ A list of supported languages:
 
 ## Installation
 
-`janus/cli.py` can be used as a standalone Python script
-
 ```sh
-python3 janus/cli.py
-```
-
-If you want a proper install
-
-```sh
-pip3 install git+https://github.com/usharerose/janus.git@[tag]
+pip3 install git+https://github.com/usharerose/janus.git
 ```
 
 ## Usage
@@ -26,7 +20,7 @@ pip3 install git+https://github.com/usharerose/janus.git@[tag]
 ### Command Line
 
 ```sh
-Usage: janus | janus/cli.py [OPTIONS] [PATHS]...
+Usage: janus [OPTIONS] [PATHS]...
 
   Args:     paths (tuple): the paths of files or directories
 
@@ -84,7 +78,7 @@ V(G) = P + 1
 	url = https://github.com/tree-sitter/tree-sitter-go
 ```
 
-2. Execute the script to store the multiple `tree-sitter` into the library
+2. Execute the script to store the multiple `tree-sitter` into the library for local dev
 ```sh
 python build_tree_sitter_lang_lib.py
 ```

@@ -1,5 +1,9 @@
 # Change Logs
 
+## 0.1.3 - 2022.01.13
+### Added
+- Add CI workflow
+
 ## 0.1.2 - 2022.01.12
 Fix the package data in `setup.py`
 
