@@ -34,5 +34,5 @@ setup(name='Janus',
       url='https://github.com/usharerose/janus.git',
       install_requires=INSTALL_REQUIRES,
       packages=['janus'],
-      package_data={'janus': ['my-language.so']},
+      package_data={'janus': ['*.so']},
       entry_points={'console_scripts': ['janus=janus.cli:main']})
