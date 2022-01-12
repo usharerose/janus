@@ -31,6 +31,9 @@ class Janus(object):
 
     def _calculate_file_complexity(self, file_path):
         _, extension = os.path.splitext(file_path)
-        analyzer = get_analyzer_by_extension(extension)
-        complexity = analyzer.analyze(file_path)
+        try:
+            analyzer = get_analyzer_by_extension(extension)
+            complexity = analyzer.analyze(file_path)
+        except NotImplementedError:
+            complexity = None
         return file_path, complexity
