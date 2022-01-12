@@ -29,13 +29,10 @@ INSTALL_REQUIRES = []
 find_install_requires(INSTALL_REQUIRES)
 
 
-PACKAGE_DATA = {'': ['*.so']}
-
-
 setup(name='Janus',
       version=VERSION,
       url='https://github.com/usharerose/janus.git',
       install_requires=INSTALL_REQUIRES,
       packages=['janus'],
-      package_data=PACKAGE_DATA,
+      package_data={'janus': ['build-tree-sitter/*.so']},
       entry_points={'console_scripts': ['janus=janus.cli:main']})
