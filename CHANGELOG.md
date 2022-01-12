@@ -1,5 +1,8 @@
 # Change Logs
 
+## 0.1.2 - 2022.01.12
+Fix the package data in `setup.py`
+
 ## 0.1.1 - 2022.01.12
 Skip the analysis on unsupported files instead of failure
 
