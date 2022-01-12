@@ -30,7 +30,7 @@ find_install_requires(INSTALL_REQUIRES)
 
 
 PACKAGES = find_packages()
-PACKAGE_DATA = {'build-tree-sitter': ['my-language.so']}
+PACKAGE_DATA = {'janus': ['build-tree-sitter/my-language.so']}
 
 
 setup(name='Janus',

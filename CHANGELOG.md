@@ -1,5 +1,8 @@
 # Change Logs
 
+## 0.1.0 - 2022.01.12
+Refactor the structure, and support multiple languages
+
 ## 0.0.2 - 2022.01.12
 The basic workflow of cyclomatic complexity analysis on Python files
 ### Added
